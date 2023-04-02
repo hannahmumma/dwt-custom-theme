@@ -1,0 +1,71 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "dwt/list-with-filters",
+	"version": "0.1.0",
+	"title": "List with Filters",
+	"category": "prh-modules",
+	"icon": "filter",
+	"description": "Filters for book or contributor PLP pages",	
+	"supports": {
+		"html": false,
+        "multiple": false
+	},
+    "example": {},
+    "attributes": {
+        "isFilters": {
+            "default": true,
+            "type": "boolean"
+        },
+        "featureBy": {
+        	"default": "books",
+        	"type": "string"
+        },
+        "filterBy": {
+            "default": "",
+            "type": "string"
+        },
+        "divisionCode": {
+            "default": "",
+            "type": "string"
+        },
+        "imprintCode": {
+            "default": "",
+            "type": "string"
+        },
+        "seriesCode": {
+            "default": "",
+            "type": "string"
+        },
+        "categoryCode": {
+            "default": "",
+            "type": "string"
+        },
+        "showMetadata": {
+            "default": false,
+            "type": "boolean"
+        },
+        "showCovers": {
+            "default": false,
+            "type": "boolean"
+        },
+        "filterByOptions": {
+        	"default": [
+                { "label": "Select All", "value": "" },                
+				{ "label": "Award Winners", "value": "showAwards" },
+				{ "label": "Bestsellers", "value": "showBestsellers" },
+				{ "label": "Coming Soon", "value": "showComingSoon" },
+				{ "label": "New Releases", "value": "showNewReleases" }
+        	],
+        	"type": "array"
+        },
+        "additionalFilterOptions": {
+            "default": [ "Category", "Featured", "Format"],
+            "type": "array"
+        }
+	},
+	"textdomain": "dwt-custom-theme",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

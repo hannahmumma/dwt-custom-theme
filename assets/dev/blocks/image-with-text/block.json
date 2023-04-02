@@ -1,0 +1,37 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "dwt/image-with-text",
+    "version": "0.1.0",
+    "title": "Image with Text",
+    "category": "prh-modules",
+    "icon": "text-page",
+    "description": "An image text module to display a single image with text or an image and book covers with text.",
+    "supports": {
+        "anchor": true,
+        "html": false
+    },
+    "example": {},
+    "attributes": {
+        "isImageWithText": {
+            "default": true,
+            "type": "boolean"
+        },
+        "layout": {
+            "default": "50-50",
+            "type": "string"
+        },       
+        "borderColor": {
+            "default": "",
+            "type": "string"
+        },
+        "textWithButtonBackgroundColor": {
+            "default": "",
+            "type": "string"
+        }
+    },  
+    "textdomain": "dwt-custom-theme",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css", 
+    "style": "file:./style-index.css"
+}

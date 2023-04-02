@@ -1,0 +1,121 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "dwt/newsletter",
+	"version": "0.1.0",
+	"title": "Newsletter",
+	"category": "prh-modules",
+	"description": "A newsletter subscription module that allows users to signup for updates/emails.",
+    "supports": {
+    	"anchor": true
+    },
+    "example": {},
+    "attributes": {
+        "isNewsletter": {
+            "default": true,
+            "type": "boolean"
+        },
+        "requiredAttrs": {
+            "default": [ "siteIdApi", "programIdApi", "acquisitionCodeApi" ],
+            "type": "array"
+        },        
+        "siteIdApi": {
+            "default": "",
+            "type": "string"
+        },
+        "programIdApi": {
+            "default": "",
+            "type": "string"
+        },
+        "preferenceIdApi": {
+            "default": "",
+            "type": "string"
+        },
+        "preferenceKeyApi": {
+            "default": "",
+            "type": "string"
+        },
+        "preferenceTextApi": {
+            "default": "",
+            "type": "string"
+        },
+        "acquisitionCodeApi": {
+            "default": "",
+            "type": "string"
+        },
+        "welcomeEmailApi": {
+            "default": true,
+            "type": "boolean"
+        },
+    	"backgroundColor": {
+            "default": "",
+    		"type": "string"
+    	},
+        "borderStyle": {
+            "default": "",
+            "type": "string"
+        },        
+        "borderColor": {
+            "default": "",
+        	"type": "string"
+        },
+        "borderWidth": {
+            "default": "",
+        	"type": "string"
+        },
+        "image": {
+            "attribute": "src",
+            "default": "",
+            "selector": "img",
+            "source": "attribute",
+            "type": "string"
+        },
+        "alt": {
+            "attribute": "alt",
+            "default": "",
+            "source": "attribute",
+            "type": "string"
+        },
+        "heading": {
+            "default": [],
+            "selector": ".newsletter__heading",
+            "source": "children",
+            "type": "array"
+        },
+        "headingColor": {
+            "default": "",
+            "type": "string"
+        },
+        "text": {
+            "default": [],
+            "selector": ".newsletter__text",
+            "source": "children",
+            "type": "array"
+        },
+        "textColor": {
+            "default": "",
+            "type": "string"
+        },
+        "legalText": {
+            "default": "",
+            "selector": ".newsletter__legal",
+            "type": "string"
+        },
+        "legalTextColor": {
+            "default": "",
+            "type": "string"
+        }
+    },
+    "providesContext": {
+        "dwt/newsletter/backgroundColor": "backgroundColor"
+    },
+    "styles": [
+        { "name": "default", "label": "Default", "isDefault": true },
+        { "name": "full-bleed", "label": "Full Bleed" }
+    ],    
+    "textdomain": "dwt-custom-theme",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "script": "file:./script.js",
+    "style": "file:./style-index.css"
+}

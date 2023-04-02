@@ -1,0 +1,37 @@
+.site-footer {
+	@apply bg-[#121212] text-[14px] text-white h-[auto] w-[100%] py-[50px];
+}
+
+
+.footer-items{
+	@apply list-none flex justify-center px-0;
+}
+
+.is-mobile-footer .footer-items{
+	@apply flex flex-col items-center;
+}
+
+.footer-item{
+	@apply mx-[15px] my-[7px];
+}
+
+
+.static-items{
+	@apply flex justify-center mt-[15px] items-center;
+}
+
+.is-mobile-footer .static-items{
+	@apply flex flex-col-reverse items-center mt-[25px];
+}
+
+.static-links {
+	@apply mx-[15px] my-[10px];
+}
+
+.static-link{
+	@apply no-underline;
+}
+
+.copyright{
+	@apply mx-[15px];
+}

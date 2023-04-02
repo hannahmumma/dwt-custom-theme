@@ -1,0 +1,64 @@
+
+.is-loading {
+	overflow: hidden;
+}
+
+.loading-image {
+	background-image: linear-gradient(90deg, #ececec 0px, #f4f4f4 40px, #ececec 80px);
+	background-size: 265px;
+	animation: is-loading-image 2s infinite ease-out;
+}
+
+.loading-title {
+	background-image: linear-gradient(90deg, #ececec 0px, #f4f4f4 40px, #ececec 80px);
+	background-size: 265px;
+	animation: is-loading-title 2s infinite ease-out;
+}
+
+.loading-author {
+	background-image: linear-gradient(90deg, #ececec 0px, #f4f4f4 40px, #ececec 80px);
+	background-size: 265px;
+	animation: is-loading-author 2s infinite ease-out;
+}
+
+.loading-format {
+	background-image: linear-gradient(90deg, #ececec 0px, #f4f4f4 40px, #ececec 80px);
+	background-size: 265px;
+	animation: is-loading-format 2s infinite ease-out;
+}
+
+@keyframes is-loading-image {
+	0% {
+		background-position: -32px;
+	}
+	40%, 100% {
+		background-position: 208px;
+	}
+}
+
+@keyframes is-loading-title {
+	0% {
+		background-position: -100px;
+	}
+	40%, 100% {
+		background-position: 208px;
+	}
+}
+
+@keyframes is-loading-author {
+	0% {
+		background-position: -100px;
+	}
+	40%, 100% {
+		background-position: 140px;
+	}
+}
+
+@keyframes is-loading-format {
+	0% {
+		background-position: -100px;
+	}
+	40%, 100% {
+		background-position: 140px;
+	}
+}

@@ -1,0 +1,46 @@
+/*
+ * Stylesheet: Book
+ * Applies to editor and front end
+ */
+
+.block__book {
+
+	@apply text-black w-full h-full;
+}
+
+.block__book .image-wrapper {
+
+	@apply flex justify-center items-center bg-light-gray;
+	background-color: var(--book-cover-bg-color);
+}
+
+.block__book .api-image-wrapper {
+
+	@apply flex justify-center;
+}
+
+.block__book .view-details {
+
+	@apply absolute opacity-0 transition-all ease-in-out duration-300 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 whitespace-nowrap;
+	box-shadow: 0 1px 3px rgb(0 0 0 / 29%);
+}
+
+.block__book .book--inner:hover:not(.block-editor-block-list__block .book--inner) .api-image {
+
+	@apply transition-all ease-in-out duration-300 scale-[1.03];
+}
+
+.block__book .book--inner:hover:not(.block-editor-block-list__block .book--inner) .view-details {
+
+	@apply opacity-100 transition-all ease-in-out duration-300;
+}
+
+.block__book .book--inner:hover .overlay {
+
+	@apply bg-black opacity-20 transition-all ease-in-out duration-300;
+}
+
+.block__book .book--inner:hover:not(.block-editor-block-list__block .book--inner) .book-details .book-details__title {
+
+	@apply underline transition-all ease-in-out duration-300;
+}

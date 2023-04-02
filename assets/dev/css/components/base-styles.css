@@ -1,0 +1,50 @@
+/***********************************************
+ *
+ * Style Variation - Bump up Base
+ *
+ ***********************************************/
+
+/*.has-bump-up::after {
+
+	@apply bg-white w-[90%]
+		h-[8%] min-h-[35px] max-h-[85px] absolute z-10 bottom-0 justify-self-center;
+
+	content: "";
+}
+
+.has-bump-up.has-border-top::after {
+
+	@apply border-t-6 border-current;
+}*/
+
+/***********************************************
+ *
+ * Style Variantion - Curved Base
+ *
+ ***********************************************/
+
+/*.has-curve {
+
+	@apply w-full relative;
+}
+
+.has-curve::before {
+
+	@apply absolute bottom-[6px] -right-[5%] -left-[5%] h-[120px] z-10;
+
+	clip-path: ellipse(50% 60% at 50% 100%);
+	content: "";
+}
+
+.has-curve::after {
+
+	@apply absolute bottom-0 -right-[5%] -left-[5%] h-[120px] bg-white z-20;
+
+	clip-path: ellipse(50% 60% at 50% 100%);
+	content: "";
+}
+
+.has-curve.has-curved-border::before {
+
+	@apply bg-current;
+}*/

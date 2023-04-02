@@ -1,0 +1,9 @@
+.block-editor-block-list__block.block__text-with-cta {
+
+	@apply border border-solid border-gray;
+}
+
+.block-editor-block-list__block.block__text-with-cta .text-with-cta--inner,
+.block-editor-block-list__block.block__text-with-cta .inner-blocks-wrapper {
+	row-gap: 25px;
+}

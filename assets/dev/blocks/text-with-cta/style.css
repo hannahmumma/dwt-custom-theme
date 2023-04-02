@@ -1,0 +1,255 @@
+/*
+ * Stylesheet: Text with CTA
+ * Applies to editor and front end
+ */
+
+/***********************************************
+ *
+ * Shared styles
+ *
+ ***********************************************/
+
+.block__text-with-cta {
+
+	@apply py-40 md:py-60;
+}
+
+.block__text-with-cta .text-with-cta--inner {
+
+	@apply w-full flex justify-center;
+}
+
+.block__text-with-cta .block-wrapper {
+
+	@apply flex flex-col w-full gap-25 px-20 md:px-50 xl:px-113 max-w-[1366px];
+}
+
+.block__text-with-cta .text-with-cta__heading,
+.block__text-with-cta .text-with-cta__text {
+
+	@apply m-0;
+}
+
+.block__text-with-cta .block-wrapper .inner-blocks-wrapper {
+
+	@apply flex flex-col gap-25;
+
+}
+
+.block__text-with-cta .block-wrapper .block__button {
+
+	@apply justify-start;
+}
+
+/***********************************************
+ *
+ * Layout - Stacked & alignment left ( default )
+ *
+ ***********************************************/
+
+.block__text-with-cta:has(.is-stacked) {
+
+	@apply flex flex-col items-center;
+}
+
+.block__text-with-cta .is-stacked.block-wrapper .text-with-cta__heading,
+.block__text-with-cta .is-stacked.block-wrapper .text-with-cta__text,
+.block__text-with-cta .is-stacked.block-wrapper .inner-blocks-wrapper {
+
+	@apply w-full;
+}
+
+/**************************************************
+ *
+ * Style Variation - Stacked with Center Alignment
+ *
+ **************************************************/
+
+.block__text-with-cta:has(.is-stacked) {
+
+	@apply flex flex-col justify-center;
+}
+
+
+.block__text-with-cta .is-stacked.is-center.block-wrapper {
+
+	@apply justify-center text-center items-center;
+	grid-template: none;
+
+}
+
+.block__text-with-cta .is-stacked.is-center.block-wrapper .inner-blocks-wrapper {
+
+	@apply items-center;
+}
+
+.block__text-with-cta .is-stacked.is-center.block-wrapper .wp-block-social-links {
+
+	@apply justify-center;
+}
+
+/***********************************************
+ *
+ * Layout - Split & Heading alignment left (default)
+ *
+ ***********************************************/
+
+.block__text-with-cta:has(.is-split) {
+
+	@apply flex flex-col justify-center items-center;
+}
+
+.block__text-with-cta .is-split.block-wrapper {
+
+	@apply lg:grid;
+
+	grid-column-gap: 0;
+
+	@screen lg {
+		grid-template-columns: 1fr 1fr 4.813rem 1fr 1fr;
+		grid-template-rows: auto auto;
+	}
+}
+
+.block__text-with-cta .is-split.block-wrapper .text-with-cta__heading {
+
+	@screen lg {
+		grid-column: 1/3;
+		grid-row: span 2;
+	}
+}
+
+.block__text-with-cta .is-split.block-wrapper .text-with-cta__text {
+
+	@screen lg {
+
+		grid-column: 4/6;
+
+		@apply mt-0;
+	}
+}
+
+.block__text-with-cta .is-split.block-wrapper .inner-blocks-wrapper {
+
+	@screen lg {
+
+		grid-column: 4/6;
+	}
+
+}
+
+/***********************************************************************
+ *
+ * Style Variation - HeadingAlignment rightside
+ *
+ ***********************************************************************/
+
+.block__text-with-cta .is-split.is-right.block-wrapper .text-with-cta__heading {
+
+	@screen lg {
+
+		grid-column: 4/6;
+		grid-row: span 2;
+	}
+}
+
+.block__text-with-cta .is-split.is-right.block-wrapper .text-with-cta__text {
+
+	@screen lg {
+
+		grid-column: 1/3;
+		grid-row: 1;
+	}
+}
+
+.block__text-with-cta .is-split.is-right.block-wrapper .inner-blocks-wrapper {
+
+	@screen lg {
+
+		grid-column: 1/3;
+	}
+
+}
+
+/***********************************************************************
+ *
+ * Style Variation - Default Base
+ *
+ ***********************************************************************/
+
+.block__text-with-cta:has(.is-default-base.has-border-bottom) {
+
+	@apply border-b-6 border-solid border-b-current;
+}
+
+/***********************************************
+ *
+ * Style Variation - Bump up Base
+ *
+ ***********************************************/
+
+.block__text-with-cta .has-bump-up::after {
+
+	@apply bg-white w-[90%]
+		h-[8%] min-h-[35px] max-h-[85px] absolute z-10 bottom-0 justify-self-center;
+
+	content: "";
+}
+
+.block__text-with-cta .has-bump-up.has-border-top::after {
+
+	@apply border-t-6 border-current;
+}
+
+.block__text-with-cta .has-bump-up .inner-blocks-wrapper {
+
+	@apply mb-40;
+} 
+
+/***********************************************
+ *
+ * Style Variantion - Curved Base
+ *
+ ***********************************************/
+
+.block__text-with-cta .has-curve {
+
+	@apply w-full relative;
+}
+
+.block__text-with-cta:has(.has-curve) .text-with-cta--inner::before {
+
+	@apply absolute bottom-[6px] -right-[5%] -left-[5%] h-[120px] z-10;
+
+	clip-path: ellipse(50% 60% at 50% 100%);
+	content: "";
+}
+
+.block__text-with-cta:has(.has-curve) .text-with-cta--inner::after {
+
+	@apply absolute bottom-0 -right-[5%] -left-[5%] h-[120px] bg-white z-20;
+
+	clip-path: ellipse(50% 60% at 50% 100%);
+	content: "";
+}
+
+.block__text-with-cta:has(.has-curved-border) .text-with-cta--inner::before {
+
+	@apply bg-current;
+}
+
+.block__text-with-cta .has-curve .inner-blocks-wrapper {
+
+	@apply mb-80;
+}
+
+/***********************************************
+ *
+ * Button and Social Links
+ *
+ ***********************************************/
+
+.block__text-with-cta .block-wrapper .wp-block-social-links {
+
+	@apply m-0;
+}

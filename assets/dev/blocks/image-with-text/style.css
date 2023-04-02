@@ -1,0 +1,256 @@
+/*
+ * Stylesheet: Image with text
+ * Applies to editor and front end
+ */
+
+/***********************************************
+ *
+ * Shared styles
+ *
+ ***********************************************/
+
+.block__image-with-text {
+
+	@apply xl:flex xl:justify-center;
+}
+
+.block__image-with-text .image-with-text--inner {
+
+	@apply w-full;
+}
+
+.block__image-with-text .text-with-cta--inner,
+.block__image-with-text .is-layered .text-with-cta--inner .inner-blocks-wrapper {
+
+	@apply gap-24;
+}
+
+.block__image-with-text .block__text-with-cta .block-wrapper {
+
+	@apply lg:p-0;
+}
+
+/***********************************************
+ *
+ * Layouts - 50/50 & 40/60
+ *
+ ***********************************************/
+
+.block__image-with-text .image-with-text--inner:has(.is-50-50),
+.block__image-with-text .image-with-text--inner:has(.is-40-60) {
+
+	@apply max-w-[1366px];
+}
+
+.block__image-with-text .is-50-50,
+.block__image-with-text .is-40-60 {
+
+	@apply flex flex-col lg:flex-row;
+}
+
+.block__image-with-text .is-50-50 > div {
+
+	@apply basis-full lg:basis-2/4;
+}
+
+.block__image-with-text .is-40-60 .block__text-with-cta {
+
+	@apply basis-full lg:basis-2/5;
+}
+
+.block__image-with-text .is-40-60 .block__featured-image {
+
+	@apply basis-full lg:basis-3/5;
+}
+
+/*Block - Text with CTA as innerBlock*/
+
+.block__image-with-text .is-50-50 .block__text-with-cta,
+.block__image-with-text .is-40-60 .block__text-with-cta {
+
+	@apply flex order-2;
+
+	@screen lg {
+		order: unset;
+	}
+}
+
+.block__image-with-text .is-50-50 .block__text-with-cta .text-with-cta--inner,
+.block__image-with-text .is-40-60 .block__text-with-cta .text-with-cta--inner {
+
+	@apply w-full flex flex-col justify-center break-all
+		py-50 md:py-60 lg:py-80 xl:py-103 lg:px-50;
+}
+
+.block__image-with-text .is-50-50 .block__text-with-cta:first-child .text-with-cta--inner,
+.block__image-with-text .is-40-60 .block__text-with-cta:first-child .text-with-cta--inner {
+
+	@apply xl:pl-113;
+}
+
+.block__image-with-text .is-50-50 .block__text-with-cta:nth-child(2) .text-with-cta--inner,
+.block__image-with-text .is-40-60 .block__text-with-cta:nth-child(2) .text-with-cta--inner {
+
+	@apply xl:pr-113;
+}
+
+
+/*BLock - Button and Social Links as innerBlock*/
+
+.block__image-with-text .is-50-50 .text-with-cta--inner .inner-blocks-wrapper,
+.block__image-with-text .is-40-60 .text-with-cta--inner .inner-blocks-wrapper {
+
+	@apply flex flex-col gap-24 items-start;
+}
+
+/*Block - Featured Image as innerBLock*/
+
+.block__image-with-text .is-50-50 .block__featured-image .featured-image--inner,
+.block__image-with-text .is-50-50 .block__featured-image .featured-image__image {
+
+	@apply aspect-[1/1] w-full h-full;
+}
+
+.block__image-with-text .is-40-60 .block__featured-image .featured-image--inner,
+.block__image-with-text .is-40-60 .block__featured-image .featured-image__image {
+
+	@apply aspect-[3/2];
+}
+
+/*Block - Book Cover as innerBlock*/
+
+.block__image-with-text .is-50-50 .block__featured-image .has-covers.has-one-cover .block__book-cover {
+
+	@apply w-[55%];
+
+	@screen md {
+		scale: 1.3;
+	}
+
+	@screen lg {
+		scale: 1;
+	}
+
+	@screen xl {
+		scale: 1.3;
+	}
+}
+
+/*Has four cover images*/
+.block__image-with-text .is-40-60 .block__featured-image .has-covers .inner-blocks-wrapper {
+
+	@apply px-20 md:px-50;
+}
+
+/*Two covers*/
+
+.block__image-with-text .is-40-60 .block__featured-image .has-two-covers .inner-blocks-wrapper {
+
+	@apply px-20 md:px-50;
+}
+
+.block__image-with-text .is-40-60 .block__featured-image .has-covers.has-two-covers .block__book-cover {
+
+	@apply w-[40%] lg:w-[auto];
+}
+
+/*For 3 cover images*/
+
+.block__image-with-text .is-40-60 .block__featured-image .has-covers.has-three-covers .inner-blocks-wrapper {
+
+	@apply px-20 md:px-50;
+}
+
+/***********************************************
+ *
+ * Layout - layered
+ *
+ ***********************************************/
+
+.block__image-with-text:has(.is-layered) {
+	@apply mb-50 md:mb-100;
+}
+
+.block__image-with-text .is-layered {
+
+	@apply flex flex-col items-center;
+}
+
+.block__image-with-text .is-layered::after {
+
+	@apply w-full absolute bottom-0 h-[50px] md:h-[100px] z-[1] bg-white;
+
+	content: "";
+}
+
+.block__image-with-text .has-border .is-layered::after {
+
+	@apply border-t-6 border-solid border-current;
+}
+
+/*Block - Text with CTA as innerBlock*/
+
+.block__image-with-text .is-layered .block__text-with-cta {
+
+	@apply pt-70 px-20 pb-40 md:pb-50 order-1;
+}
+
+.block__image-with-text .is-layered .block__text-with-cta .text-with-cta--inner {
+
+	@apply flex items-center w-full max-w-[760px] my-0 mx-auto gap-24 p-0 text-center;
+}
+
+.block__image-with-text .is-layered .block__text-with-cta .text-with-cta--inner > * {
+
+	@apply w-full;
+}
+
+/*Blocks - Button and Social Links as innerBlock*/
+
+.block__image-with-text .is-layered .block__text-with-cta .text-with-cta--inner .inner-blocks-wrapper {
+
+	@apply flex flex-col justify-center;
+}
+
+.block__image-with-text .is-layered .block__text-with-cta .text-with-cta--inner .inner-blocks-wrapper .block__button,
+.block__image-with-text .is-layered .block__text-with-cta .text-with-cta--inner .inner-blocks-wrapper .wp-block-social-links {
+
+	@apply flex justify-center;
+}
+
+/*Block - Featured Image as innerBlock*/
+
+.block__image-with-text .is-layered .block__featured-image {
+
+	@apply w-full z-[2] bg-white order-2 lg:max-w-[900px];
+
+	width: calc(100% - 40px);
+
+	@screen md {
+		width: calc(100% - 100px);
+	}
+}
+
+/*Cover images with no featured image*/
+.block__image-with-text .is-layered .block__featured-image .featured-image--inner {
+
+	@apply aspect-[16/9];
+}
+
+/*Four cover images*/
+.block__image-with-text .is-layered .block__featured-image .has-covers .inner-blocks-wrapper {
+
+	@apply px-20 md:px-50;
+}
+
+/*Three cover images*/
+.block__image-with-text .is-layered .block__featured-image .has-three-covers .inner-blocks-wrapper {
+
+	@apply px-20 md:px-50;
+}
+
+/*Two cover images*/
+.block__image-with-text .is-layered .block__featured-image .has-two-covers .inner-blocks-wrapper .block__book-cover {
+
+	@apply w-[30%] lg:w-auto;
+}

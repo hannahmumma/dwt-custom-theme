@@ -1,0 +1,9 @@
+/*
+ * Stylesheet: Book Cover
+ * Applies to editor and front end
+ */
+
+.block__book-cover {
+
+	@apply max-w-[300px];
+}

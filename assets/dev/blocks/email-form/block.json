@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "dwt/email-form",
+	"version": "0.1.0",
+	"title": "Email Form",
+	"category": "prh-modules",
+	"description": "Use this block to select and style your Email form",
+    "supports": {
+    	"html": false
+    },
+    "example": {},
+    "parent": [ "dwt/newsletter" ],
+    "attributes": {
+        "labelBackgroundColor": {
+            "type": "string",
+            "default": "#ffffff"
+        },
+        "newsletterAttrs": {
+            "default": {},
+            "type": "obect"
+        }
+    },
+    "usesContext": ["dwt/newsletter/backgroundColor"],
+    "textdomain": "dwt-custom-theme",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "script": "file:./script.js",
+    "style": "file:./style-index.css"
+}

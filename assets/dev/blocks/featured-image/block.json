@@ -1,0 +1,85 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "dwt/featured-image",
+	"version": "0.1.0",
+	"title": "Featured Image",
+	"category": "prh-modules",
+	"icon": "cover-image",
+	"description": "A featured image module to display a single image or an image/background color with book covers.",
+	"supports": {
+        "anchor": true,
+		"html": false
+	},
+    "example": {},
+    "attributes": {
+        "isFeaturedImage": {
+            "default": true,
+            "type": "boolean"
+        },
+        "image": {
+            "default": {},
+            "type": "object"
+        },
+        "mobileImage": {
+            "default": {},
+            "type": "object"
+        },
+    	"blurEffect": {
+    		"default": false,
+    		"type": "boolean"
+    	},
+    	"borderColor": {
+    		"default": "",
+    		"type": "string"
+    	},
+    	"borderStyle": {
+            "default": "",
+    		"type": "string"
+    	},
+        "baseStyle": {
+            "default": "",
+            "type": "string"
+        },
+        "url": {
+            "attribute": "href",            
+            "selector": "a",
+            "source": "attribute",
+            "type": "string"            
+        },        
+        "linkTarget": {
+            "attribute": "target",
+            "selector": "a",
+            "source": "attribute",
+            "type": "string"
+        },
+        "coverImagesOption": {
+            "default": false,
+            "type": "boolean"
+        },        
+        "backgroundColorOption": {
+            "default": true,
+            "type": "boolean"
+        },
+        "backgroundColor": {
+            "default": "",
+            "type": "string"
+        },
+        "innerBlockCount": {
+            "default": "",
+            "type": "number"
+        },
+        "bookCoverBlockImages": {
+            "default": [],
+            "type": "array"
+        },
+        "hasImageWithTextParentBlock": {
+            "default": [],
+            "type": "array"
+        }
+    },
+	"textdomain": "dwt-custom-theme",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

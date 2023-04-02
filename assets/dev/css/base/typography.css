@@ -1,0 +1,48 @@
+/*Heading Styles*/
+
+main > h1,
+.wp-block-post-title,
+.heading-1 {
+	@apply font-serif font-300 text-46 leading-54 md:text-48 md:leading-58;
+}
+
+main > h2,
+h2.wp-block-heading,
+.heading-2 {
+	@apply font-serif font-300 text-34 leading-40 md:font-400 md:text-38 md:leading-48;
+}
+
+main > h3,
+h3.wp-block-heading,
+.heading-3 {
+	@apply font-serif font-300 text-26 leading-32 md:font-400 md:text-32 md:leading-38;
+}
+
+main > h4,
+h4.wp-block-heading,
+.heading-4 {
+	@apply font-serif font-300 text-20 leading-26 md:font-400 md:text-28 md:leading-34;
+}
+
+.heading-5 {
+	@apply font-serif font-300 text-18 leading-24 md:font-400 md:text-20 md:leading-26;
+}
+
+/*Body Styles*/
+
+main > p,
+.paragraph-1 {
+	@apply font-sans font-400 text-16 leading-21 md:font-500 md:text-18 md:leading-24;
+}
+
+.paragraph-2 {
+	@apply font-sans font-400 text-14 leading-18 md:text-16 md:leading-21;
+}
+
+.paragraph-3 {
+	@apply font-sans font-400 text-14 leading-18;	
+}
+
+a, a:active, a:hover {
+	color: unset;
+}

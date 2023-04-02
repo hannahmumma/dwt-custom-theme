@@ -1,0 +1,55 @@
+:root {
+  --primary-color: #242424;
+}
+
+.filters__submenu .submenu__input {
+
+	@apply hidden;
+}
+
+.filters__submenu .submenu__input-label {
+
+	@apply cursor-pointer relative flex items-center;
+}
+
+.filters__submenu .submenu__input-label::before {
+
+	@apply absolute w-[14px] h-[14px] border border-solid border-[#242424] left-0;
+  	content: '';
+}
+
+.filters__submenu .submenu__input-label::after {
+
+	@apply absolute left-0;
+}
+
+/*Radio*/
+
+.filters__submenu input[type='radio'] + .submenu__input-label::before,
+.filters__submenu input[type='radio'] + .submenu__input-label::after {
+
+	@apply rounded-full;
+}
+
+.filters__submenu input[type='radio']:checked + .submenu__input-label::after {
+	@apply w-[8px] h-[8px] bg-[#242424] left-[3px] border-[#242424] ;
+  	content: '';
+}
+
+/*Checkbox*/
+
+.filters__submenu input[type='checkbox'] + .submenu__input-label::before {
+	
+	@apply rounded-sm;
+}
+
+.filters__submenu input[type='checkbox']:checked + .submenu__input-label::before {
+
+	@apply bg-[#242424] rounded-sm;
+}
+
+.filters__submenu input[type='checkbox']:checked + .submenu__input-label::after {
+
+	@apply text-white;
+	content: '\2713';
+}

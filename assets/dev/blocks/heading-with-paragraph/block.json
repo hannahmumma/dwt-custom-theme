@@ -1,0 +1,45 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "dwt/heading-with-paragraph",
+	"version": "0.1.0",
+	"title": "Heading with Paragraph",
+	"category": "prh-modules",
+	"description": "A text with button module",
+    "supports": {
+        "html": false,
+        "lock": false
+    }, 
+    "example": {},
+    "parent": [],
+    "attributes": {
+        "isHeadingWithParagraph": {
+            "default": true,
+            "type": "boolean"
+        },                      
+        "heading": {
+            "default": [],
+            "selector": ".heading-with-paragraph__heading",
+            "source": "children",
+            "type": "array"
+        },
+        "headingColor": {
+            "default": "",
+            "type": "string"
+        },
+        "text": {
+            "default": [],
+            "selector": ".heading-with-paragraph__text",
+            "source": "children",
+            "type": "array"
+        },
+        "textColor": {
+            "default": "",
+            "type": "string"
+        }    
+    },
+    "textdomain": "dwt-custom-theme",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

@@ -1,0 +1,4 @@
+.block-editor-block-list__block.block__grid {
+
+	@apply border border-solid border-gray;
+}

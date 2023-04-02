@@ -1,0 +1,131 @@
+/*
+ * Stylesheet: Featured Image
+ * Applies to editor and front end
+ */
+
+.block__featured-image .featured-image--inner {
+
+	@apply flex flex-col justify-center items-center w-full h-full relative aspect-[16/9] xl:aspect-[16/7];
+}
+
+.block__featured-image .featured-image__image {
+
+	@apply object-cover aspect-[16/9];
+}
+
+/***********************************************************************
+ *
+ * Style Variation - Default Base
+ *
+ ***********************************************************************/
+
+.block__featured-image:has(.is-default-base.has-border-bottom) {
+
+	@apply border-b-6 border-solid border-current;
+}
+
+/***********************************************
+ *
+ * Style Variation - Bump up Base
+ *
+ ***********************************************/
+
+.block__featured-image .has-bump-up::after {
+
+	@apply bg-white w-[90%]
+		h-[8%] min-h-[35px] max-h-[85px] absolute z-10 bottom-0 justify-self-center;
+
+	content: "";
+}
+
+.block__featured-image .has-bump-up.has-border-top::after {
+
+	@apply border-t-6 border-current;
+}
+
+/***********************************************
+ *
+ * Style Variantion - Curved Base
+ *
+ ***********************************************/
+
+.block__featured-image .has-curve {
+
+	@apply w-full relative;
+}
+
+.block__featured-image .has-curve::before {
+
+	@apply absolute bottom-[6px] -right-[5%] -left-[5%] h-[120px] z-10;
+
+	clip-path: ellipse(50% 60% at 50% 100%);
+	content: "";
+}
+
+.block__featured-image .has-curve::after {
+
+	@apply absolute bottom-0 -right-[5%] -left-[5%] h-[120px] bg-white z-20;
+
+	clip-path: ellipse(50% 60% at 50% 100%);
+	content: "";
+}
+
+.block__featured-image .has-curve.has-curved-border::before {
+
+	@apply bg-current;
+}
+
+
+/***********************************************
+ *
+ * Style Variant - Blurred Image
+ *
+ ***********************************************/
+
+.block__featured-image .image-has-blur.featured-image--inner {
+
+	@apply overflow-hidden;
+}
+
+.block__featured-image .image-has-blur.featured-image--inner .featured-image__image {
+
+	@apply blur-[25px];
+}
+
+/***********************************************
+ *
+ * Module piece: Book Covers
+ *
+ ***********************************************/
+
+/*Four book covers*/
+.block__featured-image .has-covers .inner-blocks-wrapper {
+
+	@apply w-full flex flex-row justify-center items-center gap-10 max-w-[1366px] px-20 md:px-50 xl:p-0
+		md:gap-20 lg:gap-32 xl:gap-45;
+}
+
+.block__featured-image .has-one-cover .block__book-cover {
+
+	@apply w-[35%];
+
+	@screen lg {
+		scale: 1.2;
+	}
+
+	@screen xl {
+		scale: 1.3;
+	}
+}
+
+.block__featured-image .has-three-covers .inner-blocks-wrapper {
+
+	@apply px-20 md:px-50;
+}
+
+/*Apply width to individual book covers*/
+
+.block__featured-image .has-two-covers .inner-blocks-wrapper .block__book-cover {
+
+	@apply w-[30%] lg:w-auto;
+}

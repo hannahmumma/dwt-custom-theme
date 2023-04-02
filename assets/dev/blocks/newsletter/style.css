@@ -1,0 +1,120 @@
+/*
+ * Stylesheet: Newsletter
+ * Applies to editor and front end
+ */
+
+@tailwind utilities;
+
+.block__newsletter {
+
+	@apply flex justify-center;
+}
+
+.block__newsletter .block__button {
+
+	@apply mt-10;
+}
+
+/*Border styles*/
+.is-style-full-bleed .border-1px {
+
+	@apply border-y border-x-0;
+}
+
+.is-style-full-bleed .border-2px {
+
+	@apply border-y-2 border-x-0;
+}
+
+.is-style-full-bleed .border-4px {
+
+	@apply border-y-4 border-x-0;
+}
+
+.newsletter--inner {
+
+	@apply py-60 px-20 md:py-96 md:px-[50px] lg:py-105 w-full md:w-[570px];
+}
+
+.is-style-full-bleed .newsletter--inner {
+
+	@apply flex justify-center w-full;
+}
+
+.newsletter-wrapper {
+
+	@apply flex flex-col w-full md:max-w-[570px];
+}
+
+.newsletter__image-wrapper {
+
+	@apply flex justify-center mb-20;
+}
+
+/*Override global typography*/
+.editor-styles-wrapper h4.newsletter__heading,
+.newsletter__heading {
+
+	@apply font-sans font-700 mb-20 mt-0 text-center mb-9;
+}
+
+.newsletter__text {
+
+	@apply my-0 text-center font-400;
+}
+
+.newsletter__legal {
+
+	@apply font-sans font-400 text-14 leading-21 text-center m-0;
+}
+
+.newsletter__legal > a {
+
+	@apply underline font-500;
+}
+
+.components-radio-control__option:not(:last-child) {
+
+	@apply mb-8;
+}
+
+.components-text-control__input[type="text"],
+.components-button.is-secondary {
+
+	@apply rounded;
+}
+
+.required-is-complete h2 button span svg {
+
+	@apply hidden;
+}
+
+.has-error .components-text-control__input[type="text"] {
+
+	@apply border-error-red;
+}
+
+@layer utilities {
+
+	.border-1px {
+
+		@apply border-solid border;
+	}
+
+	.border-2px {
+
+		@apply border-solid border-2;
+	}
+
+	.border-4px {
+
+		@apply border-solid border-4;
+	}
+
+	p.has-error,
+	.has-error p,
+	.has-error label {
+
+		@apply text-error-red;
+	}
+}

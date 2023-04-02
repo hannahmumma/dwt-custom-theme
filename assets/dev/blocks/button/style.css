@@ -1,0 +1,58 @@
+/*
+ * Stylesheet: Button
+ * Applies to editor and front end
+ */
+
+.block__button {
+
+	@apply flex justify-center items-center;
+}
+
+.btn-primary {
+
+	@apply font-sans font-500 text-base leading-19 text-center py-[0.8rem] px-32 uppercase rounded;
+}
+
+.btn-secondary {
+
+	@apply font-sans font-500 text-base leading-19 text-center py-[0.8rem] px-32 uppercase rounded
+		bg-transparent border-solid;
+
+}
+
+.btn-primary.no-background-color.no-text-color {
+
+	@apply text-white bg-black border-current;
+}
+
+.btn-secondary.no-background-color.no-text-color {
+
+	@apply text-black border;
+}
+
+.btn-primary:not(.wp-block .btn-primary),
+.btn-secondary:not(.wp-block .btn-secondary) {
+
+	@apply hover:transition hover:ease-in-out hover:duration-300;
+
+	&:hover {
+		transform: scale(1.03);
+	}
+}
+
+.is-text-button:not(.wp-block .is-text-button) {
+
+	@apply font-500 pb-2 border-b-transparent
+		hover:transition hover:ease-in-out hover:duration-300 hover:border-b hover:border-b-current;
+}
+
+.is-text-button:hover + .arrow-right:not(.wp-block .is-text-button:hover + .arrow-right) {
+
+	@apply translate-x-1 transition ease-in-out duration-300;
+}
+
+.is-button-link {
+
+	@apply flex items-center no-underline;
+}
+

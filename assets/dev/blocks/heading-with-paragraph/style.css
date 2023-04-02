@@ -1,0 +1,15 @@
+/*
+ * Stylesheet: Heading with Paragraph
+ * Applies to editor and front end
+ */
+
+.block__heading-with-paragraph .heading-with-paragraph__heading {
+
+	@apply m-0 break-normal;
+}
+
+.block__heading-with-paragraph .heading-with-paragraph__text {
+
+	@apply m-0 break-normal;
+}
+

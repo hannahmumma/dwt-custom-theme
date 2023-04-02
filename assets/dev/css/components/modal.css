@@ -1,0 +1,42 @@
+/*modal*/
+
+[data-modal="books"] .image-wrapper {
+
+	background-color: var(--book-cover-bg-color);
+}
+
+.modal__footer:hover {
+
+	@apply bg-[#505050] transition-all ease-in-out duration-300;
+}
+
+.modal__footer:hover .modal__footer-link {
+
+	@apply underline text-white transition-all ease-in-out duration-300;
+}
+
+.modal__footer-link {
+
+	@apply no-underline text-white transition-all ease-in-out duration-300
+}
+
+.js-opened {
+
+	@apply visible opacity-100 left-[50%] -translate-x-1/2 transition-all ease-in-out duration-1000;
+}
+
+.js-closed {
+
+	@apply invisible opacity-0 left-[50%] -translate-x-1/2 transition-all ease-in-out duration-500;
+}
+
+html:has(body.is-open-modal) {
+	@apply overflow-y-hidden;
+}
+
+.is-open-modal .backdrop {
+	
+	@apply block;
+}
+
+

@@ -1,0 +1,81 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "dwt/contributor",
+	"version": "0.1.0",
+	"title": "Contributor",
+	"category": "prh-modules",
+	"icon": "businesswoman",
+	"description": "Contributor Block",	
+	"supports": {
+		"html": false
+	},
+    "example": {},
+    "parent": [],
+    "attributes": {
+        "isContributor": {
+            "default": true,
+            "type": "boolean"
+        },
+        "hasAuthorPhoto": {
+        	"default": false,
+        	"type": "boolean"
+        },
+        "apiImage": {
+            "default": "",
+            "type": "string"
+        },        
+        "authorId": {
+            "default": "",
+            "type": "string"
+        },
+        "display": {
+            "default": "",
+            "type": "string"
+        },
+        "firstInitial": {
+            "default": "",
+            "type": "string"
+        },
+        "lastInitial": {
+            "default": "",
+            "type": "string"
+        },       
+        "spotlight": {
+            "default": "",
+            "type": "string"
+        },
+        "photoCredit": {
+            "default": "",
+            "type": "string"
+        },
+        "photoDate": {
+            "default": "",
+            "type": "string"
+        },
+        "firstWorkCover": {
+            "default": "",
+            "type": "string"
+        },        
+        "showMetadata": {
+            "default": false,
+            "type": "boolean"
+        },
+        "allowedContributorRoles": {
+            "default": [],
+            "type": "array"
+        },
+        "uploadedImage": {
+            "default": {},
+            "type": "object"
+        },
+        "altTextManual": {
+            "default": "",
+            "type": "string"
+        }
+	},
+	"textdomain": "dwt-custom-theme",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

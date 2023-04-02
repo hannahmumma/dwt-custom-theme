@@ -1,0 +1,151 @@
+/*Nav*/
+
+.open-btn {
+
+	@apply xl:hidden;
+}
+
+.open-btn svg {
+
+	@apply w-[32px];
+}
+
+.is-mobile-nav .site-logo-wrapper {
+
+	@apply w-[200px];
+}
+
+/*Main menu*/
+
+.main-menu {
+
+	@apply text-14 bg-white text-black w-[90%] top-[70px] right-0 flex flex-col pb-40 pt-25 gap-40 absolute xl:items-center 
+		xl:bg-[#121212] xl:text-white xl:w-auto xl:p-0 xl:flex-row xl:justify-end md:w-[337px];
+
+	@screen xl {
+
+		position: unset;
+	}
+}
+
+.is-mobile-menu {
+
+	@apply pl-0 transition-all ease-in-out duration-500 opacity-100 translate-x-full shadow h-[100vh];
+}
+
+.is-active.is-mobile-menu {
+
+	@apply transition-all ease-in-out duration-500 opacity-100 translate-x-0;
+}
+
+.is-mobile-menu .menu-item.is-active .submenu {
+
+	@apply pb-240;
+}
+
+.is-mobile-menu .submenu .arrow-right {
+
+	@apply rotate-180;
+}
+
+.main-menu .menu-item:not(.menu-item--search) {
+	@apply px-20 gap-10 flex items-center w-full justify-between cursor-pointer 
+		md:px-50 xl:justify-center xl:w-auto xl:px-0 xl:py-24;
+}
+
+.main-menu .menu-item .arrow-right {
+
+	@apply xl:rotate-90 xl:transition-transform xl:duration-500 xl:ease-in-out;
+}
+
+.main-menu .menu-item:hover .arrow-right {
+	
+	@apply xl:rotate-[270deg] xl:transition-transform xl:duration-500 xl:ease-in-out xl:origin-center;
+}
+
+.main-menu .menu-item:not(.menu-item--search):hover > .menu-item__link,
+.main-menu .menu-item:not(.menu-item--search):hover > .menu-item__button {
+
+	@apply underline;
+}
+
+.main-menu .is-active.menu-item .submenu .submenu-item:first-child {
+	@apply underline;
+}
+
+/*Submenus*/
+
+.main-menu .menu-item .submenu {
+
+	@apply shadow bg-white text-black absolute top-0 right-0 w-full h-full overflow-y-scroll pt-25 px-20 pb-40 grid auto-rows-max gap-40 transition-all ease-in-out duration-500 opacity-0 translate-x-full
+		md:px-50 xl:gap-y-15 xl:py-35 xl:px-55 xl:gap-x-64 xl:w-auto xl:h-auto xl:top-[50px] xl:right-auto xl:overflow-y-auto xl:-translate-y-[125%] xl:translate-x-0 z-[1] xl:-z-[1];
+}
+
+.main-menu .is-active.menu-item .submenu,
+.main-menu.is-desktop-menu .menu-item:hover .submenu {
+	
+	@apply transition-all ease-in-out duration-500 opacity-100 translate-x-0 xl:translate-y-5 xl:translate-x-0;
+}
+
+.main-menu .menu-item .is-over-column-limit.submenu {
+
+	@apply xl:grid-rows-7 xl:grid-flow-col;
+}
+
+.main-menu .menu-item .move-right.submenu {
+
+	@apply right-[100px];
+}
+
+
+/*Search*/
+
+.is-hidden-menu-items .menu-item:not(.menu-item--search) {
+	
+	@apply hidden;
+}
+
+.main-menu .menu-item--search {
+
+	@apply flex items-center gap-20 justify-between w-full -order-1 pb-25 border-b border-gray cursor-pointer 
+		xl:border-none xl:py-0 xl:border-none xl:order-none xl:py-18;
+}
+
+.main-menu .menu-item--search .search-input {
+
+	@apply w-full ml-20 text-16 border-white focus:border-b md:ml-50 xl:p-6 xl:w-0 xl:ml-0 xl:bg-[#121212] xl:text-white xl:placeholder:text-white
+		xl:transition-all xl:ease-in-out xl:duration-500 xl:opacity-0 xl:w-0;
+}
+
+.main-menu .menu-item--search .search-input:focus {
+	@apply placeholder-transparent;
+}
+
+.main-menu .menu-item--search:has(.is-active) .search-input {
+
+	@apply xl:transition-all xl:ease-in-out xl:duration-500 xl:opacity-100 xl:w-[300px];
+}
+
+.main-menu .menu-item--search:has(.search-input:focus) {
+
+	@apply border-b border-black;
+}
+
+/*Other elements*/
+
+html:has(.is-open-menu),
+html:has(.is-open-search),
+body.is-open-menu,
+body.is-open-search,
+body.is-open-menu .wrapper,
+body.is-open-search .wrapper {
+
+	@apply overflow-hidden;
+}
+
+.is-open-menu .backdrop,
+.is-open-search .backdrop {
+
+	@apply block z-[49];
+}
+

@@ -1,0 +1,150 @@
+/*Core shared styles*/
+main > h1,
+main > h2,
+main > h3,
+main > h4,
+main > p,
+.wp-block-heading,
+.wp-block-list,
+.wp-block-paragraph,
+.wp-block-post-title,
+ul.wp-block-social-links,
+.wp-block-table,
+div.block-list-appender.wp-block:has(p) {
+    
+    @apply mx-20 md:mx-50 xl:mx-113 max-w-[1366px] screen-1466:mx-auto;
+}
+
+/*core-embed*/
+
+/*Editor*/
+.block-editor-block-list__block.wp-block-embed {
+    
+    @apply flex justify-center max-w-[600px] my-0 mx-auto;
+}
+
+.block-editor-block-list__block figure.wp-block-embed {
+
+    @apply w-full my-0 mx-auto;
+}
+
+/*Front end*/
+.is-front-end .wp-block-embed {
+
+    @apply grid justify-center mx-20 md:mx-0;
+}
+
+/*core-image*/
+
+.wp-block-image {
+
+    @apply flex flex-col w-full mx-20 md:mx-50 xl:mx-113 max-w-[1366px] screen-1466:my-0 screen-1466:mx-auto;
+}
+
+.wp-block-image .wp-element-caption:not(.block-editor-block-list__block .wp-element-caption) {
+
+    @apply px-20 md:px-50 xl:px-113;
+}
+
+figure.wp-block-image.aligncenter {
+
+    @apply flex items-center;
+}
+
+figure.wp-block-image.alignright {
+
+    @apply flex items-end;
+}
+
+/*core-list*/
+
+.wp-block-list > li .wp-block-list {
+
+    @apply px-20;
+}
+
+/*core-paragraph*/
+
+.wp-block-paragraph img {
+
+    @apply m-20 h-full;
+
+    float: left;
+}
+
+.wp-block-paragraph.has-text-align-center {
+
+    @apply justify-center;
+}
+
+.wp-block-paragraph.has-text-align-right{
+
+    @apply justify-end;
+}
+
+/*core-pullquote*/
+
+figure.wp-block-pullquote {
+
+    @apply px-20 md:px-50 xl:px-113 mb-0;
+}
+
+/*core-separator*/
+
+.wp-block-separator {
+
+    @apply w-[90%] max-w-[1175px];
+}
+
+hr.wp-block-separator.is-style-dots::before {
+    font-size: 50px;
+    letter-spacing: 1em;
+}
+
+
+/*core-social-links*/
+
+ul.wp-block-social-links:not(.is-style-logos-only) {
+    @apply gap-10 w-full;
+}
+
+ul.wp-block-social-links:not(.is-style-logos-only) .wp-block-social-link {
+    @apply bg-black text-white;
+}
+
+ul.wp-block-social-links.is-style-logos-only .wp-block-social-link {
+
+    @apply text-black;
+}
+
+ul.wp-block-social-links .wp-block-social-links__social-prompt {
+    @apply text-black
+}
+
+ul.wp-block-social-links .wp-block-social-links__social-prompt .wp-block-social-link {
+
+    @apply bg-white;
+}
+
+.wp-block-social-links__social-placeholder-icons {
+
+    @apply gap-10;
+}
+
+/*core-table*/
+
+.wp-block-table {
+
+    @apply mt-16;
+}
+
+.wp-block-table__cell-content {
+
+    @apply p-10;
+}
+
+.wp-block-table figcaption.wp-element-caption {
+
+    @apply p-0;
+}
+

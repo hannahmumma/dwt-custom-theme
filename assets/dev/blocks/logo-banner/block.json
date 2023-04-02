@@ -1,0 +1,86 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "dwt/logo-banner",
+    "version": "0.1.0",
+    "title": "Logo Banner",
+    "category": "prh-modules",
+    "icon": "text-page",
+    "description": "Add a logo, headline, body text, and a CTA (a button, text link, or social media icons) to feature an imprint or brand. Click into each element to edit it.",
+    "supports": {
+        "anchor": true,
+        "html": false
+    },
+    "example": {},
+    "attributes": {
+        "isLogoBanner": {
+            "default": true,
+            "type": "boolean"
+        },
+        "borderColor": {
+            "default": "",
+            "type": "string"
+        },
+        "borderStyle": {
+            "default": "",
+            "type": "string"
+        },
+        "baseStyle": {
+            "default": "",
+            "type": "string"
+        },
+        "backgroundColor": {
+            "default": "",
+            "type": "string"
+        },
+        "heading": {
+            "default": [],
+            "selector": ".logobanner__heading",
+            "source": "children",
+            "type": "array"
+        },
+        "headingColor": {
+            "default": "",
+            "type": "string"
+        },
+        "text": {
+            "default": [],
+            "selector": ".logobanner__text",
+            "source": "children",
+            "type": "array"
+        },
+        "textColor": {
+            "default": "",
+            "type": "string"
+        },
+        "layoutStyle": {
+            "default": "",
+            "type": "string"
+        },
+        "orientationStyle": {
+            "default": "",
+            "type": "string"
+        },
+        "splitLayoutOption": {
+            "default": false,
+            "type": "boolean"
+        },
+        "logo": {
+            "type": "object",
+            "default": {}
+        },
+        "buttonOption": {
+            "default": false,
+            "type": "boolean"
+        },
+        "socialOption": {
+            "default": false,
+            "type": "boolean"
+        }
+    },
+    "textdomain": "dwt-custom-theme",
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}
+

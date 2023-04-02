@@ -1,0 +1,24 @@
+.block-editor-block-list__block.block__newsletter {
+
+	@apply border border-solid border-gray;
+}
+
+.components-modal__frame {
+
+	@apply w-[500px];
+}
+
+.editor-toggle-button .components-base-control__field {
+
+	@apply flex flex-col items-start;
+}
+
+.components-button.is-disabled {
+
+	@apply opacity-50;
+}
+
+.components-radio-control .components-base-control__help {
+
+	@apply mt-8 mb-0;
+}

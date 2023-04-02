@@ -1,0 +1,79 @@
+/**
+ * Custom `@font-face` rules
+ *
+ * These will be added immediately before Tailwind’s `base` layer.
+ */
+
+/***********************
+    Fort
+***********************/
+
+@font-face {
+    font-display: swap;    
+    font-family: "Fort";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/Fort-Light.otf") format("opentype");    
+}
+
+@font-face {
+    font-display: swap;    
+    font-family: "Fort";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Fort-Book.otf") format("opentype");    
+}
+
+@font-face {
+    font-display: swap;    
+    font-family: "Fort";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/Fort-Medium.otf") format("opentype");    
+}
+
+@font-face {
+    font-display: swap;    
+    font-family: "Fort";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/Fort-Bold.otf") format("opentype");    
+}
+
+/***********************
+    Shift
+***********************/
+
+@font-face {
+    font-display: swap;    
+    font-family: "Shift";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/Shift-Light.otf") format("opentype");    
+}
+
+@font-face {
+    font-display: swap;    
+    font-family: "Shift";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Shift-Book.otf") format("opentype");    
+}
+
+@font-face {
+    font-display: swap;    
+    font-family: "Shift";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/Shift-Medium.otf") format("opentype");    
+}
+
+@font-face {
+    font-display: swap;    
+    font-family: "Shift";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/Shift-Bold.otf") format("opentype");    
+}
+
+

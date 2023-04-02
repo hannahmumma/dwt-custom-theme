@@ -1,0 +1,78 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "dwt/book",
+	"version": "0.1.0",
+	"title": "Book",
+	"category": "prh-modules",
+	"icon": "book",
+	"description": "Book Block",	
+	"supports": {
+		"html": false,
+        "lock": false
+	},
+    "example": {},
+    "parent": [ "dwt/list" ],
+    "attributes": {
+        "isBook": {
+            "default": true,
+            "type": "boolean"
+        },
+        "apiImage": {
+        	"default": "",
+        	"type": "string"
+        },
+        "isbn": {
+            "default": "",
+            "type": "string"
+        },               
+        "title": {
+            "default": "",
+            "type": "string"
+        },
+        "author": {
+            "default": "",
+            "type": "string"
+        },
+        "format": {
+            "default": "",
+            "type": "string"
+        },
+        "awardWinner": {
+            "default": "",
+            "type": "boolean"
+        },
+        "bestseller": {
+            "default": "",
+            "type": "boolean"
+        },
+        "description": {
+            "default": "",
+            "type": "string"
+        },       
+        "workId": {
+            "default": "",
+            "type": "number"
+        },
+        "showMetadata": {
+            "default": false,
+            "type": "boolean"
+        },
+        "allowedMetadataFields": {
+            "default": [],
+            "type": "array"
+        },
+        "uploadedImage": {
+            "default": {},
+            "type": "object"
+        },
+        "altTextManual": {
+            "default": "",
+            "type": "string"
+        }
+	},
+	"textdomain": "dwt-custom-theme",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

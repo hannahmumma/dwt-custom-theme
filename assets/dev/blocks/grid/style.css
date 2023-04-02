@@ -1,0 +1,128 @@
+/*
+ * Stylesheet: Grid
+ * Applies to editor and front end
+ */
+
+/***********************************************
+ *
+ * Shared styles
+ *
+ ***********************************************/
+
+.block__grid .grid--inner {
+
+	@apply w-full px-20 md:px-50 xl:px-113 max-w-[1366px];
+}
+
+.block__grid .block__book .book--inner,
+.block__grid .block__contributor .contributor--inner {
+
+	@apply w-full h-full;
+}
+
+/*Bock heading with paragraph*/
+
+.block__grid .block__heading-with-paragraph {
+
+	@apply max-w-[760px];
+}
+
+.block__grid .block__heading-with-paragraph .heading-with-paragraph--inner {
+
+	@apply grid gap-24;
+}
+
+/*Block list*/
+
+.block__grid .block__list .inner-blocks-wrapper .list-wrapper {
+
+	@apply grid gap-10 sm:gap-20 justify-center items-center grid-cols-2 md:grid-cols-3 lg:grid-cols-4;
+}
+
+/*Block Book  */
+
+.block__grid .block__book .api-image-wrapper {
+
+	@apply flex justify-center;
+}
+
+/*Block Button*/
+
+.block__grid .block__button {
+
+	@apply col-span-full w-max;
+}
+
+/***********************************************
+ *
+ * Layout - Left aligned
+ *
+ ***********************************************/
+
+.block__grid .is-left-aligned {
+
+	@apply grid gap-y-50 grid-cols-1;
+
+	@media (min-width: 768px) {
+
+		@apply gap-x-20;
+		grid-template-columns: 3fr 1.03fr;
+	}
+}
+
+.block__grid:has(.is-left-aligned) {
+
+	@apply justify-center;
+}
+
+.block__grid .is-left-aligned .block__list {
+	grid-column: span 2;
+}
+
+.block__grid .is-left-aligned .block__button {
+
+	@apply mt-0 items-end;
+
+	grid-column: 1;
+
+	@screen md {
+
+		@apply justify-self-end;
+
+		grid-column: 2;
+		grid-row: 1;
+	}
+}
+
+/***********************************************
+ *
+ * Layout - Center aligned
+ *
+ ***********************************************/
+
+.block__grid:has(.is-center-aligned) {
+
+	@apply justify-center;
+}
+
+.block__grid .is-center-aligned {
+
+	@apply grid gap-y-50 justify-center;
+
+	grid-template-rows: repeat(3, auto);
+}
+
+.block__grid .is-center-aligned .block__heading-with-paragraph {
+
+	@apply text-center grid justify-self-center;
+}
+
+.block__grid .is-center-aligned .block__list {
+
+	@apply justify-self-center;
+}
+
+.block__grid .is-center-aligned .block__button {
+
+	@apply justify-self-center;
+}

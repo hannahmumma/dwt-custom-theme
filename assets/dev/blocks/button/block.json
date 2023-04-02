@@ -1,0 +1,76 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "dwt/button",
+	"version": "0.1.0",
+	"title": "Button",
+	"category": "prh-blocks",
+	"icon": "button",
+	"description": "A button block",
+	"supports": {
+		"html": false,
+        "lock": false
+	},
+	"example": {},
+    "attributes": {
+        "isButton": {
+            "default": true,
+            "type": "boolean"
+        },         	
+        "buttonIsSelected": {
+            "default": false,
+            "type": "boolean"
+        },
+    	"backgroundColor": {
+            "default": "",
+    		"type": "string"
+    	},
+    	"text": {
+            "default": "",
+    		"type": "string"
+    	},    	
+    	"textColor": {
+            "default": "",
+    		"type": "string"
+    	},
+    	"width": {
+    		"default": "auto",
+    		"type": "string"
+    	},
+    	"textButtonOption": {
+    		"default": false,
+    		"type": "boolean"
+    	},
+        "url": {
+            "default": "",
+            "attribute": "href",
+            "selector": "a",
+            "source": "attribute",
+            "type": "string"
+        },        
+        "linkTarget": {
+            "default": false,
+            "type": "boolean"
+        },
+        "listTypeFromBooklist": {
+            "default": "",
+            "type": "string"
+        },
+        "hasCTASlideFromCarousel": {
+            "default": false,
+            "type": "boolean"
+        },
+        "hasNewletterParentBlock": {
+            "default": false,
+            "type": "boolean"
+        }
+    }, 
+    "styles": [
+        { "name": "fill", "label": "Fill", "isDefault": true },
+        { "name": "outline", "label": "Outline" }
+    ],
+	"textdomain": "dwt-custom-theme",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

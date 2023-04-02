@@ -1,0 +1,1 @@
+Just blocks in here except for the components, hooks, and utils folders, which we can use for our own custom components/hooks

@@ -1,0 +1,5 @@
+.components-button.is-link.is-remove-button,
+.components-button.is-upload-button {
+
+	@apply mb-5;
+}

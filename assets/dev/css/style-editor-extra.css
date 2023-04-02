@@ -1,0 +1,44 @@
+/*Styles outside of .editor-styles-wrapper but within the editor UI*/
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body.wp-admin {
+    
+    @apply overflow-x-hidden;
+}
+
+[aria-label="Heading 1"],
+[aria-label="Heading 5"],
+[aria-label="Heading 6"],
+.block-editor-block-styles__variants [aria-label="Wide Line"],
+[aria-label="Separator"] .block-editor-block-switcher__container [role="group"] button:nth-child(2) {
+
+    @apply hidden;
+}
+
+input.block-editor-url-input__input {
+
+    @apply border w-full;
+}
+
+table.fixed {
+    table-layout: unset;
+    position: unset;
+}
+
+.block-editor-url-input input[type="text"] {
+
+    @apply w-full border border-solid border-gray rounded;
+}
+
+.interface-interface-skeleton__content {
+
+    @apply overflow-x-hidden;
+}
+
+.is-root-container > * {
+
+    @apply mb-4;
+}

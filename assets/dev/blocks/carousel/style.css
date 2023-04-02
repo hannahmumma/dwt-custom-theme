@@ -1,0 +1,194 @@
+/*
+ * Stylesheet: Carousel
+ * Applies to editor and front end
+ */
+
+/***********************************************
+ *
+ * Shared styles
+ *
+ ***********************************************/
+
+.block__carousel .carousel--inner {
+
+	@apply px-20 md:px-50 xl:px-113;
+}
+
+.block__carousel .block__book {
+
+	@apply w-full h-full;
+}
+
+.block__carousel .block__book .book--inner {
+
+	@apply w-full h-full;
+}
+
+/*Block Heading with Paragph as innerBlock*/
+
+.block__carousel .block__heading-with-paragraph .heading-with-paragraph--inner {
+
+	@apply grid gap-24;
+}
+
+/*Block list as innerBlock*/
+
+
+.block__carousel .block__list .block__book .image-wrapper .api-image {
+
+	@apply w-[60%];
+}
+
+.block__carousel .block__list .block__contributor .image-wrapper .api-image {
+
+	@apply w-full;
+}
+
+.cta-wrapper {
+
+	@apply bg-light-gray flex items-center justify-center self-start gap-10 aspect-[81/100];
+	background-color: var(--book-cover-bg-color);
+}
+
+/*Block Button as innerBlock*/
+
+.block__carousel .block__button {
+
+	@apply col-span-full w-max self-center;
+}
+
+/***********************************************
+ *
+ * Layout - Left aligned
+ *
+ ***********************************************/
+
+.block__carousel .is-left-aligned {
+
+	@apply grid gap-y-50 grid-cols-1;
+
+	@media (min-width: 768px) {
+
+		@apply gap-x-20;
+		grid-template-columns: 3fr 1.03fr;
+	}
+}
+
+/*Block Book list as innerBlock and left aligned*/
+
+.block__carousel .is-left-aligned .block__list {
+
+	@apply col-span-full;
+}
+
+/*Block Button*/
+
+.block__carousel .is-left-aligned .block__button {
+
+	@apply mt-0 items-end self-end;
+
+	grid-column: 1;
+	grid-row: 2;
+
+	@media (min-width: 768px) {
+
+		@apply justify-self-end;
+
+		grid-column: 2;
+		grid-row: 1;
+	}
+}
+
+/***********************************************
+ *
+ * Layout - Center aligned
+ *
+ ***********************************************/
+
+.block__carousel .is-center-aligned {
+
+	@apply flex flex-col;
+}
+
+/*Block Heading and paragraph text as innerBlock and center aligned*/
+
+.block__carousel .is-center-aligned .block__heading-with-paragraph {
+
+	@apply text-center lg:px-160 xl:px-240;
+}
+
+/*Block Book list as innerBlock and center aligned*/
+
+.block__carousel .is-center-aligned .block__list {
+
+	@apply my-50;
+}
+
+
+/***********************************************
+ *
+ * Swiper Carousel styles
+ *
+ ***********************************************/
+
+.swiper {
+
+	@apply grid;
+}
+
+.swiper-wrapper {
+
+	@apply flex;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+
+	@apply absolute top-[50%] -translate-y-1/2 w-[60px] h-[60px] items-center justify-center rounded-full cursor-pointer text-white hidden md:flex;
+
+	box-shadow: 0 3px 6px rgb(0 0 0 / 29%);
+	background-color: var(--carousel-nav-bg-color);
+
+	@media (min-width: 3560px) {
+
+		@apply hidden;
+	}
+}
+
+.swiper-button-prev svg path,
+.swiper-button-next svg path {
+	color: var(--carousel-nav-arrow-color);
+}
+
+.swiper-button-prev {
+
+	@apply left-[20px];
+}
+
+.swiper-button-next {
+
+	@apply right-[20px];
+}
+
+.swiper-button-disabled {
+
+	@apply hidden;
+}
+
+.swiper:has(.book-details) .swiper-button-prev,
+.swiper:has(.book-details) .swiper-button-next {
+
+	@apply top-[40%];
+}
+
+.swiper-button-delay {
+
+	@apply bg-light-gray;
+
+	box-shadow: none;
+}
+
+.swiper-button-delay svg path {
+	fill: #f6f6f6;
+	stroke: #f6f6f6;
+}

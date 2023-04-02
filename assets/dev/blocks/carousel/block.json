@@ -1,0 +1,79 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "dwt/carousel",
+	"version": "0.1.0",
+	"title": "Carousel",
+	"category": "prh-modules",
+	"icon": "slides",
+	"description": "A module to show up to 12 books or contributors in a carousel. Select a Filter to automatically show titles or manually add them. For Custom Titles, click an image card to remove it from the carousel. To add a new image card, click between two image cards until you see a + sign in the bottom right.",	
+	"supports": {
+        "anchor": true,
+		"html": false
+	},
+    "example": {},
+    "attributes": {
+        "isCarousel": {
+            "default": true,
+            "type": "boolean"
+        },    
+        "featureBy": {
+        	"default": "books",
+        	"type": "string"
+        },
+        "filterBy": {
+            "default": "custom",
+            "type": "string"
+        },
+        "divisionCode": {
+            "default": "",
+            "type": "string"
+        },
+        "imprintCode": {
+            "default": "",
+            "type": "string"
+        },
+        "seriesCode": {
+            "default": "",
+            "type": "string"
+        },
+        "showMetadata": {
+            "default": false,
+            "type": "boolean"
+        },
+        "showCovers": {
+            "default": false,
+            "type": "boolean"
+        },
+        "filterByOptions": {
+        	"default": [
+				{ "label": "Award Winners - Auto", "value": "showAwards" },
+				{ "label": "Bestsellers - Auto", "value": "showBestsellers" },
+				{ "label": "Coming Soon - Auto", "value": "showComingSoon" },
+				{ "label": "Custom - Manual", "value": "custom" },
+				{ "label": "New Releases - Auto", "value": "showNewReleases" }
+        	],
+        	"type": "array"
+        },
+        "layout": {
+        	"default": "is-left-aligned",
+        	"type": "string"
+        },
+        "horizontalRule": {
+        	"default": false,
+        	"type": "boolean"
+        },
+        "hasCTASlide": {
+        	"default": false,
+        	"type": "boolean"
+        },
+        "ctaSlideText": {
+            "default": [],
+            "type": "array"
+        }               
+	},
+	"textdomain": "dwt-custom-theme",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}

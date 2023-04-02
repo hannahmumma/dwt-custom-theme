@@ -1,0 +1,24 @@
+# OS generated files #
+.DS_Store*
+ehthumbs.db
+Thumbs.db
+._*
+
+# Vim generated files #
+*.un~
+
+# WordPress files #
+/mu-plugins
+/plugins
+/uploads
+/uploads.ini
+
+# Development files #
+/docker
+/vendor
+docker-compose.yml
+composer.lock
+node_modules
+package-lock.json
+.env
+/assets/dist

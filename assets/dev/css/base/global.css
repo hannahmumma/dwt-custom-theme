@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/** {
+    outline: solid 1px red;
+}*/
+
+:root {
+    --dwt-primary: #000;
+    --dwt-secondary: red;
+    --dwt-tertiary: #fff;
+}
+
+body {
+
+	@apply font-sans font-400 text-base leading-21 overflow-x-hidden;
+    min-height: 100vh;
+}
+
+.wrapper {
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+input::placeholder {
+
+    @apply text-black ease-out duration-200;
+}
+
+input:focus::placeholder {
+
+    @apply text-transparent ease-in duration-200;
+}
+
+input:focus-visible {
+    outline: unset;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+hr {
+
+    @apply w-[90%] my-0 mx-auto;
+}
+
+ol,
+ul,
+menu {
+  list-style: revert;
+  margin: 0;
+  padding: revert;
+}
+
+.error-message {
+
+    @apply mt-5;
+}
+
+.is-hidden:not(.overlay) {
+
+    @apply h-0 opacity-0 m-0 p-0 ease-out duration-200 transition-opacity;
+}
+
+.is-visible:not(.overlay) {
+
+    @apply h-auto opacity-100 ease-in duration-200 transition-opacity;
+}
+
+.site-overlay.is-hidden {
+
+    @apply opacity-0 ease-in duration-500 -z-[10];
+}
+
+.site-overlay.is-visible {
+
+    @apply opacity-100 ease-in duration-500 z-[51];
+}
+

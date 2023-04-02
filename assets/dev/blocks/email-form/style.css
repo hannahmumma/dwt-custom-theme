@@ -1,0 +1,63 @@
+/*
+ * Stylesheet: Email Form
+ * Applies to editor and front end
+ */
+
+/*Global*/
+.block__email-form {
+
+	@apply flex flex-col mt-48 max-w-[570px];
+}
+
+.email-form__form {
+
+	@apply mb-10;
+}
+
+.email-form__label {
+
+	@apply relative;
+}
+
+.email-form__label-text {
+
+	@apply text-14 absolute -top-[10px] left-[8px] px-[4px];
+}
+
+/*Underline*/
+.email-form__input {
+
+	@apply mb-10 pt-20 pb-12 pl-12 rounded-0
+		border-solid border-b border-t-0 border-r-0 border-l-0 focus:outline-none focus:border-b-2;
+}
+
+/*Outline*/
+.is-form-style-outline .email-form__input {
+
+	@apply p-17 border border-solid border-black rounded
+		focus:outline-none focus:border-2;
+}
+
+.is-form-style-outline .email-form__label-text {
+
+	@apply left-[12px];
+}
+
+/*Errors*/
+
+.error-message,
+.is-standard .error-message {
+
+	@apply px-12;
+}
+
+.has-error .email-form__input {
+
+	@apply border-error-red border border-t-0 border-r-0 border-l-0 focus:outline-none focus:border-b-2;
+}
+
+.is-form-style-outline .has-error .email-form__input {
+
+	@apply border-error-red border
+		focus:outline-none focus:border-2;
+}

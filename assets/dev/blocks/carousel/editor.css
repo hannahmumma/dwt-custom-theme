@@ -1,0 +1,46 @@
+/*
+ * Stylesheet: Carousel
+ * Applies to editor
+ */
+
+.block-editor-block-list__block.block__carousel {
+
+	@apply border border-solid border-gray;
+}
+
+.block-editor-block-list__block.block__carousel .is-center-aligned .block__list {
+
+	@apply flex justify-center;
+}
+
+.block-editor-block-list__block.block__carousel .list--inner {
+
+	@apply items-center;
+}
+
+.block-editor-block-list__block.block__carousel .is-manual .list--inner {
+
+	@apply flex overflow-x-scroll justify-start;
+}
+
+.block-editor-block-list__block.block__carousel .is-manual.block__list .inner-blocks-wrapper {
+
+	@apply flex gap-20 items-center min-w-max mr-20;
+}
+
+.block-editor-block-list__block.block__carousel .is-manual .list--inner .is-slide-for-cta {
+
+	@apply h-[351px];
+}
+
+.block-editor-block-list__block.block__carousel .is-automatic.block__list .list--inner {
+
+	@apply flex items-center gap-20;
+}
+
+.block-editor-block-list__block.block__carousel .api-image {
+
+	@apply w-[50%];
+}
+
+
